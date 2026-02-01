@@ -17,9 +17,6 @@ from oled_core import (
 st.set_page_config(page_title="Lux Taylor OLED Generator", layout="wide")
 st.title("Lux Taylor Art / Arduino Animated OLED Generator")
 
-# ----------------------------
-# Sidebar: Settings
-# ----------------------------
 st.sidebar.header("Settings")
 
 board_name = st.sidebar.selectbox("Board", list(BOARDS.keys()), index=0)
@@ -227,4 +224,5 @@ if generate:
             file_name="oled_generator_output.zip",
             mime="application/zip"
         )
+
 
