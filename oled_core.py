@@ -245,7 +245,6 @@ def generate_sketch_ino(
         lines.append("  if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_I2C_ADDR)) {")
     else:
         lines.append("  if (!display.begin(SSD1306_SWITCHCAPVCC)) {")
-    lines.append("    for(;;) {}  // halt if OLED not found")
     lines.append("  }")
     lines.append("")
     lines.append("  display.clearDisplay();")
@@ -273,5 +272,6 @@ def generate_sketch_ino(
     lines.append("  }")
     lines.append("}")
     return "\n".join(lines)
+
 
 
